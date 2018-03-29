@@ -1,0 +1,24 @@
+.bim-nav-list {
+    position: absolute;
+    margin-top: 50px;
+    top: 0px;
+    bottom: 0px;
+    width: 200px;
+    padding: 25px 0px 20px 0;
+    border-right: 1px solid #aaa;
+    box-sizing: border-box;
+}
+
+.bim-nav-list a {
+    color: #666;
+    padding: 3px 15px;
+    text-transform: capitalize
+}
+
+.bim-nav-list a:hover {
+    color: #1f8dd6;
+}
+
+.bim-nav-list a.active {
+    color: #1f8dd6;
+}

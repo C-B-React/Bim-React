@@ -1,0 +1,27 @@
+.list {
+    display: flex;
+    padding: 0 15px;
+    background-color: #fff;
+    align-items: center;
+    min-height: 44px;
+}
+
+.list-content {
+    flex: 1;
+    overflow: hidden;
+    font-size: 17px;
+    color: #000;
+    line-height: 1.5;
+    padding: 7px 0;
+}
+
+.list-extra {
+    font-size: 16px;
+    color: #888;
+    text-align: right;
+    padding: 7px 0 7px 15px;
+}
+
+.list-arrow {
+    height: 18px;
+}

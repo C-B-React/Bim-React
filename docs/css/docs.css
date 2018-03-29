@@ -1,0 +1,21 @@
+.content .docs-example {
+    border: solid 1px #ddd;
+    padding: 45px 15px 15px;
+    position: relative;
+}
+
+.content .docs-example:before {
+    content: 'EXAMPLE';
+    font-size: 12px;
+    font-weight: 700;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    color: #aaa;
+}
+
+.content .docs-example + .code pre,
+.content .code + .code pre {
+    border-top: 0;
+    margin: 0;
+}

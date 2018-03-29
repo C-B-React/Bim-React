@@ -1,0 +1,11 @@
+.bim-header {
+    height: 50px;
+    line-height: 50px;
+    background-color: #1f8dd6;
+    padding: 0 24px;
+}
+
+.bim-logo {
+    font-size: 21px;
+    color: #fff;
+}
