@@ -5,6 +5,10 @@ body {
     line-height: 1.5;
 }
 
+svg {
+    fill: red
+}
+
 ul {
     list-style: none;
     margin: 0;

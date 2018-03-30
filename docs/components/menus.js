@@ -1,13 +1,17 @@
-import List from '../pages/List';
-import Test from '../pages/Test';
+import List from '../pages/ListPage';
+import Home from './Home';
+import TabBar from '../pages/TabBarPage';
 
 const menus = [
     {
+        path: "/home",
+        component: Home
+    }, {
         path: "/list",
         component: List
-    }, {
-        path: "/test",
-        component: Test
+    },{
+        path: "/tabBar",
+        component: TabBar
     }
 ];
 
