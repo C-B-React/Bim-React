@@ -13,13 +13,12 @@ const App = () => (<div>
     <NavList menus={menus}/>
     <div className="main">
         <Switch>
-            <Route path="/" exact component={Home}/>
             {
                 menus.map((menu) => {
                     return <Route path={menu.path} component={menu.component}/>
                 })
             }
-            <Redirect to="/"/>
+            <Redirect to="/home"/>
         </Switch>
     </div>
 </div>);
