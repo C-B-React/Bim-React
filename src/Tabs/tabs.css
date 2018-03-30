@@ -1,0 +1,19 @@
+.bim-tabs {
+
+}
+
+.bim-tabs-content {
+    display: flex;
+    position: relative;
+}
+
+.bim-tabs-content-tab {
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+.bim-tabs-content-underline {
+    position: absolute;
+    border: 1px solid #06a9ec;
+    bottom: 0;
+}

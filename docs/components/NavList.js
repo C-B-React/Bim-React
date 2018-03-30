@@ -8,7 +8,7 @@ export default class NavList extends Component {
         return <div class="bim-nav-list">
             <ul>
                 <li>
-                    <NavLink activeClassName="active" to="/">首页</NavLink>
+                    {/*<NavLink activeClassName="active" to="/">首页</NavLink>*/}
                 </li>
                 {
                     menus.map((menu) => {

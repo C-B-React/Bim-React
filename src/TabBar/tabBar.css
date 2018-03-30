@@ -1,0 +1,28 @@
+.bim-tab-bar {
+    display: flex;
+    padding: 6px 0;
+}
+
+.bim-tab-bar-tab {
+    text-align: center;
+    flex: 1 1 auto;
+}
+
+.bim-tab-bar-tab-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-size: 100% 100%;
+}
+
+.bim-tab-bar-tab-title {
+    font-size: 10px;
+    margin: 0;
+    line-height: 1;
+    text-align: center;
+    color: #888;
+}
+
+.selected > .bim-tab-bar-tab-title {
+    color: #35a7fd
+}
