@@ -27,16 +27,16 @@ const data = {
     items: [
         {
             title: "首页",
-            icon: "svg/home.svg",
-            selectedIcon: "svg/home-active.svg"
+            icon: "resource/svg/home.svg",
+            selectedIcon: "resource/svg/home-active.svg"
         }, {
             title: "信息",
-            icon: "svg/message.svg",
-            selectedIcon: "svg/message-active.svg"
+            icon: "resource/svg/message.svg",
+            selectedIcon: "resource/svg/message-active.svg"
         }, {
             title: "我",
-            icon: "svg/mine.svg",
-            selectedIcon: "svg/mine-active.svg"
+            icon: "resource/svg/mine.svg",
+            selectedIcon: "resource/svg/mine-active.svg"
         }
     ],
     id: '123',

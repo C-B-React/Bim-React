@@ -9,11 +9,11 @@ const WhiteSpaceConst = {
         xl: "xl"
     },
     class: {
-        xs: "white-space-xs",
-        sm: "white-space-sm",
-        md: "white-space-md",
-        lg: "white-space-lg",
-        xl: "white-space-xl",
+        xs: "bim-whitespace-xs",
+        sm: "bim-whitespace-sm",
+        md: "bim-whitespace-md",
+        lg: "bim-whitespace-lg",
+        xl: "bim-whitespace-xl",
     }
 };
 
@@ -45,9 +45,9 @@ export default class WhiteSpace extends Component {
             ...others
         } = this.props;
 
-        const className = "white-space " + this.getSize(size);
-        const style = Object.assign({}, {height});
+        const className = "bim-white-space " + this.getSize(size);
+        const style = {...(color ? {backgroundColor: color} : {}), ...(height ? {height: height} : {})};
 
-        return <div className={className} {...style} {...others}/>
+        return <div className={className} style={style} {...others}/>
     }
 }
