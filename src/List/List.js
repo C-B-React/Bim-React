@@ -7,9 +7,9 @@ const arrowConst = {
         horizontal: "horizontal"
     },
     arrowDirection: {
-        up: "up.svg",
-        down: "down.svg",
-        horizontal: "forward.svg"
+        up: "resource/svg/up.svg",
+        down: "resource/svg/down.svg",
+        horizontal: "resource/svg/forward.svg"
     }
 };
 
@@ -28,29 +28,24 @@ function getArrowType(type) {
 export default class List extends Component {
     render() {
         const {
-            content,
-            extra,
-            arrow,
-            onClick,
-            contentStyle,
-            contentClassName,
-            extraStyle,
-            extraClassName,
+            items,
+            className,
+            style,
             ...others
         } = this.props;
 
-        const contentClass = "list-content " + (contentClassName ? contentClassName : "");
-        const extraClass = "list-extra " + (extraClassName ? extraClassName : "");
-        const arrowUrl = "./svg/" + getArrowType(arrow);
-
-
-        return <div className='list' {...others}>
-            <div className={contentClass} style={contentStyle}>{content}</div>
-            <div className={extraClass} style={extraStyle}>{extra}</div>
-            <div className="list-arrow" onClick={onClick}>
-                <object data={arrowUrl} width="20" type="image/svg+xml"/>
-            </div>
+        return <div className={"bim-list " + (className || "")} style={style || {}}>
+            {
+                items.map((item, index) => {
+                    return <div className={"bim-list-item"}>
+                        <div className={"bim-list-item-content "} style={item.contentStyle || {}}>{item.content}</div>
+                        <div className={"bim-list-item-extra "} style={item.extraStyle || {}}>{item.extra}</div>
+                        <div className={"bim-list-item-arrow"}
+                             style={{backgroundImage: "url(" + getArrowType(item.arrow) + ")"}}
+                             onClick={item.onClick}></div>
+                    </div>
+                })
+            }
         </div>
     }
-
 }

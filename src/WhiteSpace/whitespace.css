@@ -1,23 +1,23 @@
-.whitespace {
+.bim-whitespace {
     background-color: #eee;
 }
 
-.whitespace.whitespace-xs {
+.bim-whitespace-xs {
     height: 3px;
 }
 
-.whitespace.whitespace-sm {
+.bim-whitespace-sm {
     height: 6px;
 }
 
-.whitespace.whitespace-md {
+.bim-whitespace-md {
     height: 9px;
 }
 
-.whitespace.whitespace-lg {
+.bim-whitespace-lg {
     height: 15px;
 }
 
-.whitespace.whitespace-xl {
-    height: 21px;
+.bim-whitespace-xl {
+    height: 20px;
 }

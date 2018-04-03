@@ -1,4 +1,4 @@
 import WhiteSpace from './WhiteSpace';
-import "./whitespace";
+import "./whitespace.css";
 
 export default WhiteSpace;

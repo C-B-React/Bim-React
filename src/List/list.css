@@ -1,27 +1,34 @@
-.list {
-    display: flex;
-    padding: 0 15px;
+.bim-list {
     background-color: #fff;
-    align-items: center;
-    min-height: 44px;
 }
 
-.list-content {
+.bim-list-item {
+    display: flex;
+    padding: 5px 15px;
+    align-items: center;
+    line-height: 40px;
+}
+
+.bim-list-item:not(:last-child) {
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.bim-list-item-content {
     flex: 1;
     overflow: hidden;
-    font-size: 17px;
+    font-size: 18px;
     color: #000;
-    line-height: 1.5;
-    padding: 7px 0;
 }
 
-.list-extra {
+.bim-list-item-extra {
     font-size: 16px;
     color: #888;
     text-align: right;
-    padding: 7px 0 7px 15px;
+    padding-left: 15px;
 }
 
-.list-arrow {
-    height: 18px;
+.bim-list-item-arrow {
+    width: 24px;
+    height: 24px;
+    background-size: 100% 100%;
 }
