@@ -3,6 +3,7 @@ import List from '../pages/ListPage';
 import TabBar from '../pages/TabBarPage';
 import Tabs from '../pages/TabsPage';
 import BoxTitle from '../pages/BoxTitlePage';
+import Panel from '../pages/PanelPage';
 
 const menus = [
     {
@@ -20,7 +21,10 @@ const menus = [
     }, {
         path: "/boxTitle",
         component: BoxTitle
-    }
+    }, /*{
+        path: "/panel",
+        component: Panel
+    }*/
 ];
 
 export {menus};
