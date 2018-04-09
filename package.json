@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server --open",
     "build": "babel src -d lib --presets react,es2015,stage-0&& npm run copycss",
-    "copycss": "node tools/copyCSS.js"
+    "copycss": "node tools/copyCSS.js",
+    "com":"node tools/com.js"
   },
   "keywords": [
     "ui",
