@@ -1,0 +1,19 @@
+.bim-titlebar {
+
+}
+
+.bim-titlebar-bar {
+    display: inline-block;
+    width: 5px;
+    height: 18px;
+    background-color: #00a8ec;
+    vertical-align: bottom;
+}
+
+.bim-titlebar-title {
+    display: inline-block;
+    line-height: 1;
+    font-size: 18px;
+    margin-left: 10px;
+    vertical-align: bottom;
+}

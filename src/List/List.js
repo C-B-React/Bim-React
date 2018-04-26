@@ -31,18 +31,20 @@ export default class List extends Component {
             items,
             className,
             style,
+            onClick,
             ...others
         } = this.props;
 
-        return <div className={"bim-list " + (className || "")} style={style || {}}>
+        return <div className={"bim-list " + (className || "")} style={style || {}} onClick={onClick || (() => {
+        })} {...others}>
             {
                 items.map((item, index) => {
-                    return <div className={"bim-list-item"}>
+                    return <div className={"bim-list-item"} style={item.style || {}}>
                         <div className={"bim-list-item-content "} style={item.contentStyle || {}}>{item.content}</div>
                         <div className={"bim-list-item-extra "} style={item.extraStyle || {}}>{item.extra}</div>
-                        <div className={"bim-list-item-arrow"}
-                             style={{backgroundImage: "url(" + getArrowType(item.arrow) + ")"}}
-                             onClick={item.onClick}></div>
+                        <svg className={"bim-list-item-arrow"}>
+                            <use xlinkHref={"#forward"}/>
+                        </svg>
                     </div>
                 })
             }

@@ -45,7 +45,7 @@ export default class WhiteSpace extends Component {
             ...others
         } = this.props;
 
-        const className = "bim-white-space " + this.getSize(size);
+        const className = "bim-whitespace " + this.getSize(size);
         const style = {...(color ? {backgroundColor: color} : {}), ...(height ? {height: height} : {})};
 
         return <div className={className} style={style} {...others}/>

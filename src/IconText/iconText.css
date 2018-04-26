@@ -1,0 +1,18 @@
+.bim-icontext {
+    display: inline-block;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.bim-icontext-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.bim-icontext-text {
+    margin: 5px 0 0 0;
+    color: #333;
+    line-height: 1.5;
+    font-size: 13px;
+}

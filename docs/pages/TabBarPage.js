@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 import TabBar from 'bim-ui/TabBar';
+import '../../public/resource/svg/home.svg';
+import '../../public/resource/svg/message.svg';
+import '../../public/resource/svg/mine.svg';
 
 const Home = () => (<h1>我是home</h1>);
 const Message = () => (<h1>我是message</h1>);
@@ -27,16 +30,13 @@ const data = {
     items: [
         {
             title: "首页",
-            icon: "resource/svg/home.svg",
-            selectedIcon: "resource/svg/home-active.svg"
+            icon: "#home",
         }, {
             title: "信息",
-            icon: "resource/svg/message.svg",
-            selectedIcon: "resource/svg/message-active.svg"
+            icon: "#message",
         }, {
             title: "我",
-            icon: "resource/svg/mine.svg",
-            selectedIcon: "resource/svg/mine-active.svg"
+            icon: "#mine",
         }
     ],
     id: '123',

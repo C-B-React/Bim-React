@@ -4,6 +4,8 @@ const path = require("path");
 // const HtmlWebpackPlugin = require('html-webpack-plugin');
 // const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+
+
 module.exports = {
     entry: "./docs/index.js",
     output: {
@@ -35,7 +37,20 @@ module.exports = {
             },
             {
                 test: /\.(jpg|png|svg)$/,
-                loader: "url-loader?limit=8192"
+                loader: "url-loader?limit=8192",
+                exclude: [
+                    path.resolve(__dirname, "public/resource/svg")
+                ]
+            },
+            {
+                test: /\.svg$/,
+                loader: 'svg-sprite-loader?' + JSON.stringify({
+                    name: '[name]',
+                    prefixize: true
+                }),
+                include: [
+                    path.resolve(__dirname, './public/resource/svg')
+                ]
             }
         ]
     },

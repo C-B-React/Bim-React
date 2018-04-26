@@ -4,9 +4,9 @@
 
 .bim-list-item {
     display: flex;
-    padding: 5px 15px;
+    padding: 15px;
     align-items: center;
-    line-height: 40px;
+    font-size: 13px;
 }
 
 .bim-list-item:not(:last-child) {
@@ -16,19 +16,18 @@
 .bim-list-item-content {
     flex: 1;
     overflow: hidden;
-    font-size: 18px;
-    color: #000;
+    color: #4f4f4f;
 }
 
 .bim-list-item-extra {
-    font-size: 16px;
-    color: #888;
+    color: #999;
     text-align: right;
     padding-left: 15px;
+    padding-right: 3px;
 }
 
 .bim-list-item-arrow {
-    width: 24px;
-    height: 24px;
-    background-size: 100% 100%;
+    width: 18px;
+    height: 18px;
+    fill: #a2a2a2;
 }

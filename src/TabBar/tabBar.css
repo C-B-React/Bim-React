@@ -1,18 +1,18 @@
-.bim-tab-bar {
-    display: flex;
-    padding: 6px 0;
-}
-
 .bim-tab-bar-tab {
     text-align: center;
     flex: 1 1 auto;
+    color: #888;
+}
+
+.selected.bim-tab-bar-tab {
+    color: #35a7fd;
 }
 
 .bim-tab-bar-tab-icon {
     display: inline-block;
-    width: 24px;
-    height: 24px;
-    background-size: 100% 100%;
+    width: 30px;
+    height: 30px;
+    fill: currentColor;
 }
 
 .bim-tab-bar-tab-title {
@@ -20,9 +20,24 @@
     margin: 0;
     line-height: 1;
     text-align: center;
-    color: #888;
 }
 
-.selected > .bim-tab-bar-tab-title {
-    color: #35a7fd
+.bim-tabbar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.bim-tabbar-content {
+    flex: 1 1 auto;
+}
+
+.bim-tabbar-tab {
+    display: flex;
+    padding: 6px 0;
+    border-top: 1px solid #ddd;
 }

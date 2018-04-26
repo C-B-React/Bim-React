@@ -1,0 +1,19 @@
+.bim-textinput {
+    display: inline-block;
+    position: relative;
+    padding-right: 20px;
+}
+
+.bim-textinput > input {
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.bim-textinput > svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+}

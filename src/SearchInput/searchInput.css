@@ -1,0 +1,22 @@
+.bim-search {
+    position: relative;
+}
+
+.bim-search-icon {
+    position: absolute;
+    left: 5px;
+    top: 4px;
+    width: 24px;
+    height: 24px;
+    fill: #666;
+}
+
+.bim-search-input {
+    padding-left: 40px;
+    box-sizing: border-box;
+    width: 100%;
+    line-height: 30px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}

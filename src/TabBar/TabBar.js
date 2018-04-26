@@ -4,7 +4,7 @@ export default class TabBar extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            selectedIndex: this.props.selectedIndex || -1
+            selectedIndex: this.props.selectedIndex || 0
         }
     }
 
@@ -46,26 +46,43 @@ export default class TabBar extends Component {
             items,
             className,
             style,
-            unselectedColor,
-            selectedColor,
+            tabBarTabStyle,
+            tabColor,
+            tabSelectedColor,
             onClick,
             selectedIndex,
             ...others
         } = this.props;
 
-        return <div className={"bim-tab-bar " + (className || "")} style={style || {}} {...others}>
-            {
-                items.map((item, index) => {
-                    const isSelected = this.state.selectedIndex == index;
-                    let tabClassName = "bim-tab-bar-tab " + (isSelected ? "selected" : "");
-                    let iconStyle = isSelected ? {backgroundImage: `url(${item.selectedIcon})`} : {backgroundImage: `url(${item.icon})`};
+        return <div className={"bim-tabbar"} style={style || {}}>
+            <div className={"bim-tabbar-content"}>
+                {
+                    this.props.children.map((child, index) => {
+                        const isSelected = this.state.selectedIndex == index;
 
-                    return <div className={tabClassName} onClick={this.handleClick(index).bind(this)}>
-                        <span className="bim-tab-bar-tab-icon" style={iconStyle}/>
-                        <p className="bim-tab-bar-tab-title" style={this.getTitleColor(isSelected)}>{item.title}</p>
-                    </div>
-                })
-            }
+                        return <div className={isSelected ? "" : "hide"}>
+                            {child}
+                        </div>
+                    })
+                }
+            </div>
+            <div className={"bim-tabbar-tab " + (className || "")} style={tabBarTabStyle || {}}  {...others}>
+                {
+                    items.map((item, index) => {
+                        const isSelected = this.state.selectedIndex == index;
+                        const tabClassName = "bim-tab-bar-tab " + (isSelected ? "selected" : "");
+
+                        return <div className={tabClassName} onClick={this.handleClick(index).bind(this)}
+                                    href={item.url}>
+                            <svg className="bim-tab-bar-tab-icon">
+                                <use xlinkHref={`${item.icon}`}/>
+                            </svg>
+                            <p className="bim-tab-bar-tab-title" style={this.getTitleColor(isSelected)}>{item.title}</p>
+                        </div>
+                    })
+                }
+            </div>
+
         </div>
     }
 }
